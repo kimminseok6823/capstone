@@ -21,11 +21,25 @@ import java.io.IOException;
 public class GeminiProVisionController {
 
     private final GenerativeModel generativeModel;
-
+/*
     @PostMapping
-    public String file(@RequestParam String question) throws IOException{
+    public String file(@RequestParam("file")MultipartFile file, @RequestParam String question) throws IOException{
         GenerateContentResponse generateContentResponse =this.generativeModel.generateContent(
                 ContentMaker.fromMultiModalData(
+                        PartMaker.fromMimeTypeAndData(file.getContentType(), file.getBytes()),
+                        question
+                )
+        );
+        return ResponseHandler.getText(generateContentResponse);
+    }
+    사진
+ */
+
+    @PostMapping
+    public String file(@RequestParam("file")MultipartFile file, @RequestParam String question) throws IOException{
+        GenerateContentResponse generateContentResponse =this.generativeModel.generateContent(
+                ContentMaker.fromMultiModalData(
+                        PartMaker.fromMimeTypeAndData(file.getContentType(), file.getBytes()),
                         question
                 )
         );
