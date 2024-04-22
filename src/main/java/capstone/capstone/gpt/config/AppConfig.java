@@ -1,4 +1,4 @@
-package capstone.capstone.gpt.config;
+/*package capstone.capstone.gpt.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -7,4 +7,4 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("capstone.capstone.gpt.config")
 public class AppConfig {
     // 다른 구성 코드들...
-}
+}*/

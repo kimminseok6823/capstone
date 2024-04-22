@@ -26,9 +26,13 @@ repositories {
 dependencies {
 	implementation 'io.github.flashvayne:chatgpt-spring-boot-starter:1.0.0'
 	annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+
+
+	//vertex-ai
 	implementation platform('com.google.cloud:libraries-bom:26.37.0')
-	implementation 'com.google.cloud:google-cloud-bigquery'
-//	implementation 'org.springframework.ai:spring-ai-vertex-ai-gemini-spring-boot-starter'
+	implementation 'com.google.cloud:google-cloud-vertexai'
+
+
 	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
