@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Page</title>
+</head>
+<body>
+<h1>Chat Page</h1>
+<input type="text" id="textInput" placeholder="Enter Text" style="width: 300px;">
+<button onclick="sendMessage()">Send</button>
+<div id="response"></div>
+
+<script>
+    function sendMessage() {
+        var text = document.getElementById("textInput").value;
+        fetch('/chat/' + text)
+            .then(response => {
+                console.log("Response status:", response.status);
+                return response.json();
+            })
+            .then(data => {
+                console.log("Response data:", data);
+                // "Response:" 문자열 제거
+                const cleanedResponse = (data["resp"] || "").replace(/^Response: /, "");
+                // "답변:"으로 시작하는 응답 생성
+                document.getElementById("response").innerText = "답변: " + cleanedResponse;
+            })
+            .catch(error => console.error('Error:', error));
+
+        event.preventDefault(); // 이 부분 추가
+    }
+</script>
+</body>
+</html>

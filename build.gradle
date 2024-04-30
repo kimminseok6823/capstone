@@ -27,19 +27,22 @@ dependencies {
 	implementation 'io.github.flashvayne:chatgpt-spring-boot-starter:1.0.0'
 	annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
 
-
 	//vertex-ai
 	implementation platform('com.google.cloud:libraries-bom:26.37.0')
 	implementation 'com.google.cloud:google-cloud-vertexai'
 
 
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-devtools'
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.h2database:h2'
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 	annotationProcessor 'org.projectlombok:lombok'
+	implementation'org.springframework.boot:spring-boot-starter-thymeleaf'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 }
