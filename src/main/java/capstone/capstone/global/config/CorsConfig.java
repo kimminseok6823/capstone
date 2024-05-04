@@ -1,6 +1,10 @@
 package capstone.capstone.global.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -10,11 +14,10 @@ public class CorsConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedMethods("*")
-                .allowedOrigins("http://localhost:3000")
-                .allowedOrigins("http://localhost:8081");
+                .allowedOrigins("http://localhost:3000");
     }
 
-    /*@Bean
+    @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
         corsConfiguration.addAllowedOrigin("http://localhost:3000"); // 도메인
@@ -26,5 +29,5 @@ public class CorsConfig implements WebMvcConfigurer {
         source.registerCorsConfiguration("/**", corsConfiguration);
 
         return new CorsFilter(source);
-    }*/
+    }
 }
