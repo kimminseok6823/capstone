@@ -1,8 +1,8 @@
 package capstone.capstone.domain.profile.service;
 
 
-import capstone.capstone.domain.member.board.entity.Board;
-import capstone.capstone.domain.member.board.repository.BoardRepository;
+import capstone.capstone.domain.board.entity.Board;
+import capstone.capstone.domain.board.repository.BoardRepository;
 import capstone.capstone.domain.member.dto.EditInformation;
 import capstone.capstone.domain.member.dto.Information;
 import capstone.capstone.domain.member.dto.ProfileInformation;

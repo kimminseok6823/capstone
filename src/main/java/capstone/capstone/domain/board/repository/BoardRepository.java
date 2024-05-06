@@ -1,7 +1,7 @@
-package capstone.capstone.domain.member.board.repository;
+package capstone.capstone.domain.board.repository;
 
 
-import capstone.capstone.domain.member.board.entity.Board;
+import capstone.capstone.domain.board.entity.Board;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

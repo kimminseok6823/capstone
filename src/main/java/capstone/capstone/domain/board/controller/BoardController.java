@@ -1,10 +1,10 @@
-package capstone.capstone.domain.member.board.controller;
+package capstone.capstone.domain.board.controller;
 
 
 
-import capstone.capstone.domain.member.board.dto.BoardDto;
-import capstone.capstone.domain.member.board.dto.BoardResponseDto;
-import capstone.capstone.domain.member.board.service.BoardService;
+import capstone.capstone.domain.board.dto.BoardDto;
+import capstone.capstone.domain.board.dto.BoardResponseDto;
+import capstone.capstone.domain.board.service.BoardService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.persistence.EntityNotFoundException;

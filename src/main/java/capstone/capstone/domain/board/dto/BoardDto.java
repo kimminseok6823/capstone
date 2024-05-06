@@ -1,4 +1,4 @@
-package capstone.capstone.domain.member.board.dto;
+package capstone.capstone.domain.board.dto;
 
 import lombok.Builder;
 import lombok.Getter;

@@ -1,7 +1,7 @@
-package capstone.capstone.domain.member.board.dto;
+package capstone.capstone.domain.board.dto;
 
 
-import capstone.capstone.domain.member.board.entity.Board;
+import capstone.capstone.domain.board.entity.Board;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;

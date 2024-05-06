@@ -1,7 +1,7 @@
 package capstone.capstone.domain.member.dto;
 
 
-import capstone.capstone.domain.member.board.entity.Board;
+import capstone.capstone.domain.board.entity.Board;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

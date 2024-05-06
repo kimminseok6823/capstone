@@ -1,12 +1,12 @@
-package capstone.capstone.domain.member.board.service;
+package capstone.capstone.domain.board.service;
 
 
-import capstone.capstone.domain.member.board.dto.BoardDto;
-import capstone.capstone.domain.member.board.dto.BoardResponseDto;
-import capstone.capstone.domain.member.board.entity.Board;
-import capstone.capstone.domain.member.board.repository.BoardPopularPostRepository;
-import capstone.capstone.domain.member.board.repository.BoardRepository;
-import capstone.capstone.domain.member.board.repository.BoardSearchRepository;
+import capstone.capstone.domain.board.dto.BoardDto;
+import capstone.capstone.domain.board.dto.BoardResponseDto;
+import capstone.capstone.domain.board.entity.Board;
+import capstone.capstone.domain.board.repository.BoardRepository;
+import capstone.capstone.domain.board.repository.BoardPopularPostRepository;
+import capstone.capstone.domain.board.repository.BoardSearchRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.persistence.EntityNotFoundException;

@@ -19,6 +19,7 @@ public class Member {
     private String email;
     private String memberId;
     private String password;
+
     @ManyToOne(cascade = CascadeType.ALL)
     private Authority authority;
     private Boolean activate;

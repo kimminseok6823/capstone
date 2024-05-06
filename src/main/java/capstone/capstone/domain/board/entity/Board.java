@@ -1,4 +1,4 @@
-package capstone.capstone.domain.member.board.entity;
+package capstone.capstone.domain.board.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
