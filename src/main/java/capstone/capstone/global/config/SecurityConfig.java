@@ -50,21 +50,38 @@ public class SecurityConfig {
                         .authenticationEntryPoint(jwtAuthenticationEntryPoint)
                 )
 
+//                .authorizeHttpRequests(authorizeHttpRequests -> authorizeHttpRequests
+//                        .requestMatchers(
+//                                PathRequest.toH2Console()
+//                                , new AntPathRequestMatcher("/api/login")
+//                                , new AntPathRequestMatcher("/api/sign-up")
+//                                , new AntPathRequestMatcher("/checkDuplicateMemberId")
+//                                , new AntPathRequestMatcher("/findMemberId"), new AntPathRequestMatcher("/**")
+//                        ).permitAll()
+//                        .anyRequest().authenticated()
+//                )
+
                 .authorizeHttpRequests(authorizeHttpRequests -> authorizeHttpRequests
-                        .requestMatchers(new AntPathRequestMatcher("/")).permitAll()
+                        .requestMatchers(
+                                new AntPathRequestMatcher("/api/login"),
+                                new AntPathRequestMatcher("/api/sign-up"),
+                                new AntPathRequestMatcher("/checkDuplicateMemberId"),
+                                new AntPathRequestMatcher("/findMemberId"),
+                                new AntPathRequestMatcher("/**")
+                        ).permitAll()
                         .anyRequest().authenticated()
                 )
 
                 // 세션을 사용하지 않기 때문에 STATELESS로 설정
                 .sessionManagement(sessionManagement ->
                         sessionManagement.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                );
+                )
 
-//                // enable h2-console
-//                .headers(headers ->
-//                        headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin)
-//                )
-//                .apply(new JwtSecurityConfig(tokenProvider));
+                // enable h2-console
+                .headers(headers ->
+                        headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin)
+                )
+                .apply(new JwtSecurityConfig(tokenProvider));
         return http.build();
     }
 }
